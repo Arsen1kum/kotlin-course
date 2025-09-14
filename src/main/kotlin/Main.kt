@@ -17,6 +17,6 @@ fun main() {
 
 
 fun main() {
-    val message = "I Love Kotlin"
+    val message = "I Love Kotlin, but learning two times a week might be not really good idea"
     println(message)
 }
