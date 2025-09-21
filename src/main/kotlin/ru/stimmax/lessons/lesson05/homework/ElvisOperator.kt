@@ -11,12 +11,8 @@ package Kotlin.example.ru.stimmax.lessons.lesson05.homework
 // example 1
 val baseIntensity: Double = 3.0
 val coefficient: Double? = 0.73 // но может быть null
-val baseCoefficient = 0.5
-
+val baseCoefficient: Double = 0.5
 val resultIntensity = baseIntensity * (coefficient ?: baseCoefficient) // если coefficient не null — берем его, иначе подставляем baseCoefficient
-
-println(resultIntensity)
-
 
 //Задача 2
 //
@@ -27,12 +23,11 @@ println(resultIntensity)
 //example 2
 val defaultCost: Double = 50.0
 val cost: Double? = 20.0 // но может быть null
-val deliveryCost = 5.0
-val insuranceCoefficient = 0.005
-
+val deliveryCost: Double = 5.0
+val insuranceCoefficient: Double = 0.005
 val insuranceCost = (cost ?: defaultCost) * insuranceCoefficient // стоимость страховки: берем cost или defaultCost
 val totalCost: Double = deliveryCost + insuranceCost // полная стоимость доставки
-println(totalCost)
+
 
 //Задача 3
 //
@@ -41,9 +36,6 @@ println(totalCost)
 // Задача - сообщить об ошибке в случае отсутствия показаний атмосферного давления.
 
 // example 3
-val pressure: String? = "34.6" // но может быть null
+val pressure: Double? = "34.6" // но может быть null
 val attentionMessage = "Attention, pressure is lost"
-
 val pressureForLab = pressure ?: attentionMessage // если pressure не null — берем его, иначе выдаем attentionMessage
-
-println(pressureForLab)
