@@ -36,6 +36,6 @@ val totalCost: Double = deliveryCost + insuranceCost // полная стоим�
 // Задача - сообщить об ошибке в случае отсутствия показаний атмосферного давления.
 
 // example 3
-val pressure: Double? = "34.6" // но может быть null
+val pressure: Double? = 34.6 // но может быть null
 val attentionMessage = "Attention, pressure is lost"
 val pressureForLab = pressure ?: attentionMessage // если pressure не null — берем его, иначе выдаем attentionMessage
